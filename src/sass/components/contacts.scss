@@ -1,0 +1,70 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 16px;
+
+  @include mix.tablet {
+    justify-content: center;
+    column-gap: 88px;
+  }
+
+  &__item {
+    flex-basis: 100%;
+    display: grid;
+    row-gap: 8px;
+
+    @include mix.tablet {
+      flex-basis: content;
+      row-gap: 12px;
+      padding-top: 40px;
+
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: auto;
+    }
+
+    &--time {
+      @include mix.tablet {
+        background-image: url("../img/time.svg");
+      }
+    }
+
+    &--address {
+      @include mix.tablet {
+        background-image: url("../img/navigation.svg");
+      }
+    }
+
+    &--phone {
+      @include mix.tablet {
+        background-image: url("../img/phone.svg");
+      }
+    }
+  }
+
+  &__term {
+    text-transform: capitalize;
+    text-align: center;
+    color: rgba(var.$on-background, 0.5);
+  }
+
+  &__descr {
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  &__descr a {
+    &:hover,
+    &:focus {
+      color: var.$primary-color;
+      outline-color: var.$on-background;
+    }
+  }
+
+  &__descr address {
+    font-style: normal;
+  }
+}

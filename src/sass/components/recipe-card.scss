@@ -1,0 +1,118 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  color: rgba(var.$on-background, 0.8);
+  background-color: var.$background-add;
+  border-radius: 6px;
+
+  &:first-of-type {
+    background-image: url("../img/recipe.png");
+    background-image: image-set(
+      url('../img/recipe.webp') type("image/webp"),
+      url("../img/recipe.png") type("image/png")
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &:last-of-type {
+    display: none;
+
+    @include mix.tablet {
+      display: flex;
+      background-color: var.$primary-color;
+      color: var.$on-primary-color;
+    }
+  }
+
+  &__title {
+    order: 1;
+    max-width: 412px;
+    margin-bottom: 24px;
+    font-weight: 700;
+    text-align: center;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
+    @include mix.tablet {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__label {
+    max-width: max-content;
+    margin-bottom: 24px;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: rgba(var.$on-primary-color, 0.3);
+    border-radius: 4px;
+
+    @include mix.tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__date {
+    margin-bottom: 12px;
+
+    @include mix.tablet {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__author {
+    order: 1;
+    margin-bottom: 60px;
+    text-transform: capitalize;
+  }
+
+  &__link {
+    order: 1;
+    width: 90px;
+    margin-top: auto;
+    padding: 12px;
+
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var.$on-primary-color;
+
+    background-color: var.$on-background;
+    border-radius: 4px;
+
+    &--primary {
+      color: var.$on-background;
+      background-color: var.$background;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      outline-color: var.$on-background;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &--disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}

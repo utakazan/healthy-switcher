@@ -1,0 +1,70 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.about {
+  padding: 24px;
+
+  @include mix.mobile {
+    padding: 0 36px 36px;
+  }
+
+  @include mix.tablet {
+    padding: 0 48px 48px;
+  }
+
+  @include mix.desktop {
+    padding: 0 60px 60px;
+  }
+
+  &__wrapper {
+    @include mix.mobile {
+      padding: 32px 16px;
+      background-color: var.$background-add;
+    }
+
+    @include mix.tablet {
+      padding: 48px 24px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 16px;
+
+    @include mix.tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__text {
+    margin: 0 auto 24px;
+
+    line-height: 1.6;
+    letter-spacing: -0.2px;
+    color: var.$on-background-add;
+    text-align: justify;
+
+    @include mix.mobile {
+      max-width: 396px;
+      margin: 0 auto 32px;
+      text-align: center;
+    }
+
+    @include mix.tablet {
+      max-width: 496px;
+      margin: 0 auto 48px;
+    }
+
+    @include mix.desktop {
+      max-width: 736px;
+      margin: 0 auto 60px;
+    }
+  }
+
+  &__slider {
+    display: none;
+
+    @include mix.mobile {
+      display: block;
+    }
+  }
+}

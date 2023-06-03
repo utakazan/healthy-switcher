@@ -1,0 +1,18 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.pagination {
+  &__btn {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var.$on-background-add;
+    cursor: pointer;
+
+    &--current {
+      width: 10px;
+      height: 10px;
+      background-color: var.$on-background;
+    }
+  }
+}

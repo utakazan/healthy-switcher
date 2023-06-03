@@ -1,0 +1,44 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.recipe {
+  padding: 24px;
+
+  @include mix.mobile {
+    padding: 0 36px 36px;
+  }
+
+  @include mix.tablet {
+    padding: 0 48px 48px;
+  }
+
+  @include mix.desktop {
+    padding: 0 60px 60px;
+  }
+
+  &__heading {
+    max-width: 272px;
+    margin: 0 auto 32px;
+
+    @include mix.mobile {
+      max-width: 504px;
+    }
+
+    @include mix.tablet {
+      max-width: 672px;
+    }
+
+    @include mix.desktop {
+      max-width: 872px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+
+    @include mix.tablet {
+      grid-template-columns: 60% 40%;
+      gap: 24px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.chefs {
+
+  padding: 24px;
+
+  @include mix.mobile {
+    padding: 0 36px 36px;
+  }
+
+  @include mix.tablet {
+    padding: 0 48px 48px;
+  }
+
+  @include mix.desktop {
+    padding: 0 60px 60px;
+  }
+
+  &__heading {
+    max-width: 272px;
+    margin: 0 auto 32px;
+
+    @include mix.mobile {
+      max-width: 504px;
+    }
+
+    @include mix.tablet {
+      max-width: 672px;
+    }
+
+    @include mix.desktop {
+      max-width: 872px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include mix.tablet {
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    @include mix.tablet {
+      flex-basis: content;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 6px;
+
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    text-transform: capitalize;
+
+    @include mix.desktop {
+      font-size: 20px;
+    }
+  }
+
+  &__descr {
+    display: block;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    opacity: 0.5;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.header {
+
+  &__container {
+    @include mix.desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 24px 32px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    padding: 24px;
+
+    @include mix.desktop {
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto;
+  }
+
+  &__btn {
+    &--nojs {
+      display: none;
+    }
+
+    @include mix.tablet {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    &--nojs,
+    &--opened {
+      display: block;
+    }
+
+    @include mix.tablet {
+      display: block;
+    }
+  }
+}

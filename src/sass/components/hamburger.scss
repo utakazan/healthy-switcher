@@ -1,0 +1,22 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.hamburger {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+
+  &__icon {
+    fill: var.$primary-color;
+  }
+
+  &__icon-open,
+  &--open .hamburger__icon-close {
+    display: block;
+  }
+
+  &__icon-close,
+  &--open .hamburger__icon-open {
+    display: none;
+  }
+}

@@ -1,0 +1,107 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.social {
+  padding: 24px;
+
+  @include mix.mobile {
+    padding: 0 36px 36px;
+  }
+
+  @include mix.tablet {
+    padding: 0 48px 48px;
+  }
+
+  @include mix.desktop {
+    padding: 0 60px 60px;
+  }
+
+  &__heading {
+    max-width: 272px;
+    margin: 0 auto 32px;
+
+    @include mix.mobile {
+      max-width: 504px;
+    }
+
+    @include mix.tablet {
+      max-width: 672px;
+    }
+
+    @include mix.desktop {
+      max-width: 872px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @include mix.tablet {
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    flex-basis: 100%;
+    padding: 16px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+
+    background-color: var.$background-add;
+    border-radius: 6px;
+
+    @include mix.tablet {
+      flex-basis: auto;
+      flex-grow: 1;
+      padding: 24px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid rgba(var.$on-background, 0.2);
+    border-radius: 50%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+
+    &--twitter {
+      background-image: url("../img/twitter.svg");
+    }
+
+    &--instagram {
+      background-image: url("../img/instagram.svg");
+    }
+
+    &--facebook {
+      background-image: url("../img/facebook.svg");
+    }
+  }
+
+  &__caption {
+    margin-right: auto;
+    color: var.$on-background-add;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__link {
+    @include mix.mobile-less-576 {
+      padding: 12px;
+    }
+
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}

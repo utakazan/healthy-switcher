@@ -1,0 +1,32 @@
+@use "./../variables" as var;
+
+// X-Small devices (portrait phones, less than 576px)
+@mixin mobile-less-576 {
+  @media screen and (max-width: var.$mobile-less-576) {
+    @content;
+  }
+}
+// Small devices (landscape phones 576 - 767px)
+@mixin mobile {
+  @media screen and (min-width: var.$mobile) {
+    @content;
+  }
+}
+// Medium devices (tablets 768 - 991px)
+@mixin tablet {
+  @media screen and (min-width: var.$tablet) {
+    @content;
+  }
+}
+// Large devices (desktops 992 - 1199px)
+@mixin desktop {
+  @media screen and (min-width: var.$desktop) {
+    @content;
+  }
+}
+// Large devices (desktops 1200px and more)
+@mixin desktop-more-1200 {
+  @media screen and (min-width: var.$desktop-more-1200) {
+    @content;
+  }
+}

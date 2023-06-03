@@ -1,0 +1,27 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.footer {
+  display: grid;
+  background-color: var.$background-add;
+
+  &__contacts {
+    border-bottom: 2px solid rgba(var.$on-background-add, 0.1);
+  }
+
+  &__contacts-inner {
+    padding: 30px 32px;
+  }
+
+  &__copyright-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding: 30px 32px;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

@@ -1,0 +1,77 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.menu {
+  padding: 24px;
+
+  @include mix.mobile {
+    padding: 0 36px 36px;
+  }
+
+  @include mix.tablet {
+    padding: 0 48px 48px;
+  }
+
+  @include mix.desktop {
+    padding: 0 60px 60px;
+  }
+
+  &__heading {
+    max-width: 272px;
+    margin: 0 auto 32px;
+
+    @include mix.mobile {
+      max-width: 504px;
+    }
+
+    @include mix.tablet {
+      max-width: 672px;
+    }
+
+    @include mix.desktop {
+      max-width: 872px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    @include  mix.tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 0;
+    }
+
+    @include  mix.desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__list--hidden .menu__item:nth-child(n+2){
+    display: none;
+
+    @include mix.tablet {
+      display: block;
+    }
+  }
+
+  &__btn {
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: 0.2em;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: var.$on-background;
+    background-color: transparent;
+
+    &--hidden {
+      display: none;
+    }
+
+    @include mix.tablet {
+      display: none;
+    }
+  }
+}

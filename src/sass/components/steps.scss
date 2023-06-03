@@ -1,0 +1,100 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.steps {
+  padding: 24px;
+
+  @include mix.mobile {
+    padding: 0 36px 36px;
+  }
+
+  @include mix.tablet {
+    padding: 0 48px 48px;
+  }
+
+  @include mix.desktop {
+    padding: 0 60px 60px;
+  }
+
+  &__heading {
+    max-width: 272px;
+    margin: 0 auto 32px;
+
+    @include mix.mobile {
+      max-width: 504px;
+    }
+
+    @include mix.tablet {
+      max-width: 672px;
+    }
+
+    @include mix.desktop {
+      max-width: 872px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 30px;
+
+    @include mix.tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mix.desktop-more-1200 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    padding: 24px;
+    background-color: var.$background-add;
+    border-radius: 6px;
+
+    &--primary {
+      background-color: var.$primary-color;
+      color: var.$on-primary-color;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+    text-transform: capitalize;
+
+    &::after {
+      @include mix.pseudo-element(56px, 2px);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: var.$primary-color;
+    }
+
+    @include mix.tablet {
+      font-size: 20px;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  &__title--primary {
+    &::after {
+      background-color: var.$on-primary-color;
+    }
+  }
+
+  &__descr {
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    opacity: 0.5;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

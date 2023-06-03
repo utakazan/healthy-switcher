@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official website of the ready-made healthy food delivery service">
+  <title>Healthy switcher</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="../fonts/SFUIText-Light.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/SFUIDisplay-Regular.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/SFUIText-Bold.woff" type="font/woff" as="font" crossorigin="anonymous">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__inner">
+        <img class="header__logo" src="./img/logo.svg" width="207" height="24" alt="logo">
+        <button class="header__btn header__btn--nojs hamburger" type="button" aria-label="menu">
+          <svg class="hamburger__icon" width="24" height="24" aria-hidden="true" focusable="false">
+            <use class="hamburger__icon-open" xlink:href="./img/svg/sprite.svg#hamburger"></use>
+            <use class="hamburger__icon-close" xlink:href="./img/svg/sprite.svg#cross"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="header__nav header__nav--nojs navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--primary" href="#menu">menu</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#recipe">recipes</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#chefs">chefs</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#social">contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+
+      <a class="btn-up" href="#">
+        <svg class="btn-up__icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <use xlink:href="./img/svg/sprite.svg#page-up"></use>
+        </svg>
+        <span class="btn-up__text">up</span>
+      </a>
+
+      <section class="intro">
+        <h1 class="intro__heading h1">your <strong>favourite food</strong> delivered <strong>hot & fresh</strong></h1>
+        <p class="intro__text"><span class="uppercase">healthy switcher</span> chefs do all the prep steps, like peeling, chopping & marinating, so you can cook a fresh homemade dinner in just 15 minutes.</p>
+        <a class="intro__btn button button--primary" href="#menu">order now</a>
+        <ul class="intro__list contacts">
+          <li class="contacts__item contacts__item--time">
+            <p class="contacts__descr">today 10:00 am - 7:00 pm</p>
+            <span class="contacts__term">working hours</span>
+          </li>
+          <li class="contacts__item contacts__item--address">
+            <div class="contacts__descr">
+              <address>velyka vasylkivska 100</address>
+            </div>
+            <span class="contacts__term">get directions</span>
+          </li>
+          <li class="contacts__item contacts__item--phone">
+            <p class="contacts__descr"><a href="tel:+380638332415">+38 (063) 833 24 15</a></p>
+            <span class="contacts__term">call online</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="about">
+        <div class="about__wrapper">
+          <h2 class="about__heading h2">the basics of healthy food</h2>
+          <p class="about__text">In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur voluptate est. Eu minim dolore laboris enim mollit voluptate irure esse aliquip.</p>
+          <div class="about__slider">
+            <div class="slider">
+              <button class="slider__btn" type="button" aria-label="previous photo">
+                <svg class="slider__icon slider__icon--previous" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/svg/sprite.svg#arrow-next"></use>
+                </svg>
+              </button>
+              <div class="slider__gallery">
+                <ol class="slider__pagination pagination">
+                  <li class="pagination__item">
+                    <button class="pagination__btn" type="button">
+                      <span class="visually-hidden">first photo</span>
+                    </button>
+                  </li>
+                  <li class="pagination__item">
+                    <button class="pagination__btn pagination__btn--current" type="button">
+                      <span class="visually-hidden">second photo</span>
+                    </button>
+                  </li>
+                  <li class="pagination__item">
+                    <button class="pagination__btn" type="button">
+                      <span class="visually-hidden">third photo</span>
+                    </button>
+                  </li>
+                </ol>
+                <picture class="slider__img">
+                  <source type="image/webp" srcset="./img/gallery/grilled-salmon.webp 1x, ./img/gallery/grilled-salmon@2x.webp 2x">
+                  <img src="./img/gallery/grilled-salmon.jpg" srcset="./img/gallery/grilled-salmon@2x.jpg 2x" width="350" height="270" alt="grilled salmon">
+                </picture>
+                <picture class="slider__img">
+                  <source type="image/webp" srcset="./img/gallery/egg-salad.webp 1x, ./img/gallery/egg-salad@2x.webp 2x">
+                  <img src="./img/gallery/egg-salad.jpg" srcset="./img/gallery/egg-salad@2x.jpg 2x" width="350" height="270" alt="salad with eggs and vegetables">
+                </picture>
+              </div>
+              <button class="slider__btn" type="button" aria-label="next photo">
+                <svg class="slider__icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                  <use xlink:href="./img/svg/sprite.svg#arrow-next"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="steps">
+        <h2 class="steps__heading h2">how it works</h2>
+        <ul class="steps__list">
+          <li class="steps__item steps__item--primary">
+            <h3 class="steps__title steps__title--primary">pick meals</h3>
+            <p class="steps__descr">choose your meals from our diverse weekly menu. Find gluten or dairy free, low carb & veggie options.</p>
+          </li>
+          <li class="steps__item">
+            <h3 class="steps__title">choose how often</h3>
+            <p class="steps__descr">our team of chefs do the prep work - no more chopping, measuring, or sink full of dishes!</p>
+          </li>
+          <li class="steps__item">
+            <h3 class="steps__title">fast deliveries</h3>
+            <p class="steps__descr">your freshly prepped 15-min dinner kits arrive on your doorstep in a refrigerated box.</p>
+          </li>
+          <li class="steps__item">
+            <h3 class="steps__title">tasty meals</h3>
+            <p class="steps__descr">gobble makes cooking fast, so you have more time to unwind and be with family.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="menu" id="menu">
+        <h2 class="menu__heading h2">dish of the day</h2>
+        <ul class="menu__list menu__list--hidden">
+          <li class="menu__item menu-card">
+            <picture>
+              <source type="image/webp" srcset="./img/cards/pumpkin-soup.webp 1x, ./img/cards/pumpkin-soup@2x.webp 2x">
+              <img class="menu-card__img" src="./img/cards/pumpkin-soup.jpg" srcset="./img/cards/pumpkin-soup@2x.jpg 2x" width="350" height="260" alt="Pumpkin soup">
+            </picture>
+            <a class="menu-card__descr" href="#">
+              <h3 class="menu-card__title">featured meal №1</h3>
+              <p class="menu-card__subtitle">served with french fries + drink</p>
+              <p class="menu-card__text">Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...</p>
+            </a>
+          </li>
+          <li class="menu__item menu-card">
+            <picture>
+              <source type="image/webp" srcset="./img/cards/bowl-lentils.webp 1x, ./img/cards/bowl-lentils@2x.webp 2x">
+              <img class="menu-card__img" src="./img/cards/bowl-lentils.jpg" srcset="./img/cards/bowl-lentils@2x.jpg 2x" width="350" height="260" alt="Lentils bowl">
+            </picture>
+            <a class="menu-card__descr" href="#">
+              <h3 class="menu-card__title">featured meal №2</h3>
+              <p class="menu-card__subtitle">served with french fries + drink</p>
+              <p class="menu-card__text">Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...</p>
+            </a>
+          </li>
+          <li class="menu__item menu-card">
+            <picture>
+              <source type="image/webp" srcset="./img/cards/avocado-egg-toast.webp 1x, ./img/cards/avocado-egg-toast@2x.webp 2x">
+              <img class="menu-card__img" src="./img/cards/avocado-egg-toast.jpg" srcset="./img/cards/avocado-egg-toast@2x.jpg 2x" width="350" height="260" alt="Avocado toast">
+            </picture>
+            <a class="menu-card__descr" href="#">
+              <h3 class="menu-card__title">featured meal №3</h3>
+              <p class="menu-card__subtitle">served with french fries + drink</p>
+              <p class="menu-card__text">Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...</p>
+            </a>
+          </li>
+          <li class="menu__item menu-card">
+            <picture>
+              <source type="image/webp" srcset="./img/cards/grilled-salmon.webp 1x, ./img/cards/grilled-salmon@2x.webp 2x">
+              <img class="menu-card__img" src="./img/cards/grilled-salmon.jpg" srcset="./img/cards/grilled-salmon@2x.jpg 2x" width="350" height="260" alt="Grilled salmon">
+            </picture>
+            <a class="menu-card__descr" href="#">
+              <h3 class="menu-card__title">featured meal №4</h3>
+              <p class="menu-card__subtitle">served with french fries + drink</p>
+              <p class="menu-card__text">Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...</p>
+            </a>
+          </li>
+          <li class="menu__item menu-card">
+            <picture>
+              <source type="image/webp" srcset="./img/cards/avocado-bowl.webp 1x, ./img/cards/avocado-bowl@2x.webp 2x">
+              <img class="menu-card__img" src="./img/cards/avocado-bowl.jpg" srcset="./img/cards/avocado-bowl@2x.jpg 2x" width="350" height="260" alt="Avocado bowl">
+            </picture>
+            <a class="menu-card__descr" href="#">
+              <h3 class="menu-card__title">featured meal №5</h3>
+              <p class="menu-card__subtitle">served with french fries + drink</p>
+              <p class="menu-card__text">Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...</p>
+            </a>
+          </li>
+          <li class="menu__item menu-card">
+            <picture>
+              <source type="image/webp" srcset="./img/cards/rice-lentils.webp 1x, ./img/cards/rice-lentils@2x.webp 2x">
+              <img class="menu-card__img" src="./img/cards/rice-lentils.jpg" srcset="./img/cards/rice-lentils@2x.jpg 2x" width="350" height="260" alt="Rice and lentils">
+            </picture>
+            <a class="menu-card__descr" href="#">
+              <h3 class="menu-card__title">featured meal №6</h3>
+              <p class="menu-card__subtitle">served with french fries + drink</p>
+              <p class="menu-card__text">Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...</p>
+            </a>
+          </li>
+        </ul>
+        <button class="menu__btn" type="button">show more</button>
+      </section>
+
+      <section class="chefs" id="chefs">
+        <h2 class="chefs__heading h2">this month's chefs</h2>
+        <ul class="chefs__list">
+          <li class="chefs__item">
+            <picture>
+              <source type="image/webp" srcset="./img/chefs/gregory-flores.webp">
+              <img class="chefs__avatar" src="./img/chefs/gregory-flores.png" width="65" height="65" alt="Chef">
+            </picture>
+            <p class="chefs__inner">
+              <span class="chefs__name">gregory flores</span>
+              <span class="chefs__descr">chef of the cold</span>
+            </p>
+          </li>
+          <li class="chefs__item">
+            <picture>
+              <source type="image/webp" srcset="./img/chefs/annette-cooper.webp">
+              <img class="chefs__avatar" src="./img/chefs/annette-cooper.png" width="65" height="65" alt="Chef">
+            </picture>
+            <p class="chefs__inner">
+              <span class="chefs__name">annette cooper</span>
+              <span class="chefs__descr">chef of the hot</span>
+            </p>
+          </li>
+          <li class="chefs__item">
+            <picture>
+              <source type="image/webp" srcset="./img/chefs/greg-fox.webp">
+              <img class="chefs__avatar" src="./img/chefs/greg-fox.png" width="65" height="65" alt="Chef">
+            </picture>
+            <p class="chefs__inner">
+              <span class="chefs__name">greg fox</span>
+              <span class="chefs__descr">chef macro kitchen</span>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="recipe" id="recipe">
+        <h2 class="recipe__heading h2">recipes from our chefs</h2>
+        <div class="recipe__wrapper">
+          <article class="recipe-card recipe-card--big">
+            <h3 class="recipe-card__title">lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+            <span class="recipe-card__label">recipe of the day</span>
+            <time class="recipe-card__date" datetime="2016-07-05">05 Jul 2016</time>
+            <p class="recipe-card__author">jason keller</p>
+            <a class="recipe-card__link" href="#">read</a>
+          </article>
+          <article class="recipe-card recipe-card--small">
+            <h3 class="recipe-card__title">lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+            <span class="recipe-card__label">breakfast</span>
+            <time class="recipe-card__date" datetime="2016-07-05">05 Jul 2016</time>
+            <p class="recipe-card__author">jason keller</p>
+            <a class="recipe-card__link recipe-card__link--primary" href="#">read</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="social" id="social">
+        <h2 class="social__heading h2">we in social</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <span class="social__icon social__icon--twitter"></span>
+            <p class="social__caption">twitter</p>
+            <a class="social__link button" href="#" target="_blank">follow</a>
+          </li>
+          <li class="social__item">
+            <span class="social__icon social__icon--instagram"></span>
+            <p class="social__caption">instagram</p>
+            <a class="social__link button" href="#" target="_blank">follow</a>
+          </li>
+          <li class="social__item">
+            <span class="social__icon social__icon--facebook"></span>
+            <p class="social__caption">facebook</p>
+            <a class="social__link button" href="#" target="_blank">follow</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+
+    <section class="footer__contacts">
+      <h2 class="footer__contacts-header visually-hidden">Contact us</h2>
+      <div class="footer__contacts-inner container">
+        <ul class="contacts">
+          <li class="contacts__item contacts__item--time">
+            <p class="contacts__descr">today 10:00 am - 7:00 pm</p>
+            <span class="contacts__term">working hours</span>
+          </li>
+          <li class="contacts__item contacts__item--address">
+            <div class="contacts__descr">
+              <address>velyka vasylkivska 100</address>
+            </div>
+            <span class="contacts__term">get directions</span>
+          </li>
+          <li class="contacts__item contacts__item--phone">
+            <p class="contacts__descr"><a href="tel:+380638332415">+38 (063) 833 24 15</a></p>
+            <span class="contacts__term">call online</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer__copyright">
+      <div class="footer__copyright-inner container">
+        <img class="footer__logo" src="./img/logo.svg" width="207" height="24" alt="logo">
+        <small class="footer__text">&#169; Designed by Yellow Snow. All Rights Reserved.</small>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+<script src="./js/script.js"></script>
+</html>

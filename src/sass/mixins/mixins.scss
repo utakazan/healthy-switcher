@@ -1,0 +1,6 @@
+@mixin pseudo-element($width, $height) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
+}

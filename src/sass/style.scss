@@ -1,0 +1,23 @@
+// Global
+@use "./global";
+
+// Components
+@use "./components/header.scss";
+@use "./components/navigation.scss";
+@use "./components/hamburger.scss";
+
+@use "./components/main.scss";
+@use "./components/intro.scss";
+@use "./components/contacts.scss";
+@use "./components/about.scss";
+@use "./components/slider.scss";
+@use "./components/pagination.scss";
+@use "./components/steps.scss";
+@use "./components/menu.scss";
+@use "./components/menu-card.scss";
+@use "./components/chefs.scss";
+@use "./components/recipe.scss";
+@use "./components/recipe-card.scss";
+@use "./components/social.scss";
+
+@use "./components/footer.scss";

@@ -1,0 +1,212 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+
+  font-family: "SF UI Text", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var.$on-background;
+
+  background-color: var.$background;
+  background-image: url("../img/main-background.png");
+  background-image: image-set(
+    url('../img/main-background.webp') type("image/webp"),
+    url("../img/main-background.png") type("image/png")
+  );
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+.uppercase {
+  text-transform: uppercase;
+}
+// Up to top button
+.btn-up {
+  display: none;
+
+  &__icon {
+    transform: rotate(-90deg);
+  }
+
+  &__text {
+    display: none;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  @include mix.desktop {
+    position: fixed;
+    right: 0px;
+    bottom: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 40px;
+    height: 48px;
+    background-color: rgba(var.$primary-color, 0.5);
+    fill: var.$on-background;
+
+    border-radius: 6px 0 0 6px;
+
+    &:hover {
+      width: 100px;
+      transition: 0.5s;
+    }
+
+    &:hover .btn-up__text {
+      display: block;
+    }
+
+    &:hover .btn-up__icon {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.h1 {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.1em;
+  color: var.$on-background;
+
+  @include mix.mobile {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  @include mix.tablet {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  @include mix.desktop {
+    font-size: 60px;
+    line-height: 72px;
+  }
+}
+
+.h2 {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 16px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.2em;
+  color: var.$on-background;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  @include mix.mobile {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  @include mix.tablet {
+    padding-bottom: 32px;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  // Decorative line
+  &::after {
+    @include mix.pseudo-element(60px, 2px);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background-color: var.$primary-color;
+  }
+}
+
+.button {
+  max-width: fit-content;
+  padding: 16px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.2em;
+  color: rgba(var.$on-background, 0.3);
+
+  background-color: var.$background;
+  border: 2px solid rgba(var.$on-background, 0.2);
+  border-radius: 30px;
+
+  &:hover {
+    color: rgba(var.$on-background, 0.5);
+    border-color: rgba(var.$on-background, 0.5);
+  }
+
+  &:focus {
+    outline-color: var.$on-background;
+  }
+
+  &:active {
+    color: rgba(var.$on-background, 0.3);
+    border-color: rgba(var.$on-background, 0.3);
+  }
+
+  &--primary {
+    background-color: var.$primary-color;
+    color: var.$on-primary-color;
+    border: none;
+
+    &:hover {
+      color: var.$on-primary-color;
+      opacity: 0.8;
+    }
+    &:focus {
+      outline-color: var.$on-background;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

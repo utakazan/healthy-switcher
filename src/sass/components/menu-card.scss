@@ -1,0 +1,70 @@
+@use "./../variables" as var;
+@use "./../mixins" as mix;
+
+.menu-card {
+  background-color: var.$background-add;
+  border-radius: 6px;
+
+  @include mix.tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    display: none;
+
+    @include mix.tablet {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px 6px 0 0;
+      object-fit: contain;
+    }
+  }
+
+  &__descr {
+    padding: 20px;
+    cursor: pointer;
+
+    @include mix.tablet {
+      padding: 30px;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      outline-color: var.$on-background;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var.$on-background;
+
+    @include mix.tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    font-size: 14px;
+    letter-spacing: -0.15px;
+    color: var.$on-background-add;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    letter-spacing: -0.1625px;
+    color: rgba(var.$on-background, 0.8);
+  }
+}
+
